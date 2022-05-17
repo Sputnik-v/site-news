@@ -4,6 +4,14 @@
 *::after {
   box-sizing: border-box;
 }
+.body {
+  font-family: 'Merienda', cursive;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
 /* Убираем внутренние отступы */
 ul[class],
@@ -35,6 +43,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'Dosis', sans-serif;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
