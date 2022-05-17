@@ -2,7 +2,6 @@
 class ApiServer {
 
      _APIKey = 'apiKey=1367a33dfa624450b30f11f2f88ec12b';
-     _APIKeyWeather = '567e1b967dc6d01b40f4ed90cbfc190c'
      enpointAll = 'everything';
      enpointHead = 'top-headlines';
      country = ['country=us', 'country=ru', 'country=ua'];
@@ -12,13 +11,6 @@ class ApiServer {
       let date = new Date();
       let output = date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + (String(date.getDate()).padStart(2, '0') - 1);
       return output;
-     }
-     getWeather = async () => {
-       const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=56.8618601&lon=53.2324285&appid=${this._APIKeyWeather}`);
-       if (!result.ok) {
-        throw new Error(`Not Fetch GisMeteo - ${result.status}`);
-      }
-      return await result.json();
      }
 
 

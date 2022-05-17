@@ -5,13 +5,12 @@ import './header.css';
 const Header = () => {
 
     const [data, setData] = useState([]);
-    const [resWeather, setResWeather] = useState([]);
-    const [loadingWeather, setLoadingWeather] = useState(false);
     const [load, setLoad] = useState(false);
 
     const ap = new ApiServer();
 
     useEffect(() => {
+        
         ap.getNewsPopularRequest('Ukraine')
             .then(({articles}) => {
                 if(load) {
@@ -21,22 +20,9 @@ const Header = () => {
                     setData(articles);
                 }
             });
-        
     }, []);
-    useEffect(() => {
-        ap.getWeather()
-            .then(result => {
-                if(loadingWeather) {
-                    return
-                } else {
-                    setLoadingWeather(true);
-                    setResWeather(result);
-                }
-            })    
-    },[])
-   
-
-
+    
+  
     const elem = data.map((item, i) => {
         return (
             <span key={i}>
@@ -46,6 +32,9 @@ const Header = () => {
             
         )
     })
+
+    
+
     
 
     return (
@@ -53,7 +42,6 @@ const Header = () => {
             <div className="container">
                 <div className="header__block">
                     <a href="https://www.indiatoday.in"><div className="header__logo">News Today <span className="header__logo-span">Go</span></div></a>
-                    <p className="header__pogoda">pogoda</p>
                     <nav className="header__nav">
                         <ul className="header__ul">
                             <a href="yandex.ru"><li className="header__li">World News</li></a>
