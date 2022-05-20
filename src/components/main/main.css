@@ -15,4 +15,5 @@
 }
 .main__nav {
     flex: 1 1 30%;
+    border-left: 2px solid rgba(136, 44, 44, 0.4);
 }

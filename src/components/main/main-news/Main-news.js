@@ -22,6 +22,7 @@ const MainNews = () => {
     },[])
 
    const content = news.map(({urlToImage, description, url}, i) => {
+       const descp = description.slice(0, 50) + '...'
     if (!news) {
         return <a href="mail.ru" className="news__link">
                     <img src="https://cdn-icons-png.flaticon.com/512/1339/1339824.png" alt="404" className="news__link-img" />
@@ -30,6 +31,9 @@ const MainNews = () => {
         return (
                 <a href={url} className="news__link" key={i}>
                     <img src={urlToImage} alt="" className="news__link-img" />
+                    <div className="news__cont">
+                        <span className="news__descp">{descp}</span>
+                    </div>
                 </a>
         )
     }

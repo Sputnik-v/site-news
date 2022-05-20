@@ -22,6 +22,14 @@ class ApiServer {
         return await res.json();
     }
 
+    getNewsTech = async (variant) => {
+      const res = await fetch(`${this.adress}${this.enpointHead}?sources=${variant}&${this._APIKey}`);
+      if (!res.ok) {
+        throw new Error(`Not Fetch ${this.adress} - ${res.status}`)
+      }
+      return await res.json();
+    }
+
     getNewsResource = async () => {
       const res = await fetch(`${this.adress}${this.enpointHead}/sources?${this._APIKey}`);
       if (!res.ok) {
