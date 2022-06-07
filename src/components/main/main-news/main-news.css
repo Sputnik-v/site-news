@@ -37,3 +37,20 @@
 .news__descp {
     color: #fff;
 }
+.news__cont-more {
+    bottom: 40%;
+    left: 23%;
+    background-color:unset;
+    font-size: 29px;
+    color: #fff;
+    font-weight: bold;
+}
+.news__cont-more::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url('./arrow-down.svg');
+    left: 60px;
+}

@@ -30,7 +30,7 @@ const MainNews = () => {
     } else {
         return (
                 <a href={url} className="news__link" key={i}>
-                    <img src={urlToImage} alt="" className="news__link-img" />
+                    <img src={urlToImage} className="news__link-img" />
                     <div className="news__cont">
                         <span className="news__descp">{descp}</span>
                     </div>
@@ -43,6 +43,10 @@ const MainNews = () => {
         <div className="news">
             <div className="news__container">
                 {content}
+                <a href="https://yandex.ru/news" className="news__link">
+                    <img src="more__fone.jpg" alt="fone" className="news__link-img" />
+                    <div className="news__cont news__cont-more">More News</div>
+                </a>
             </div>
         </div>
        
