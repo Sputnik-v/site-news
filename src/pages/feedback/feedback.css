@@ -1,0 +1,79 @@
+.form .container {
+    display: flex;
+    flex-direction: column;
+}
+.form {
+    text-align: center;
+    margin-top: 40px;
+    min-height: calc(100vh - 220px);
+}
+.form__title {
+    position: relative;
+    margin-bottom: 100px;
+}
+.form__title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 2px;
+    background-color: brown;
+    position: absolute;
+    left: 47%;
+    bottom: -5px;
+}
+.form__label {
+    padding-right: 10px;
+    font-size: 18px;
+    color: rgb(80, 82, 83);
+}
+#name {
+    margin-right: 20px;
+    width: 200px;
+    border: 1px solid brown;
+    border-radius: 3px;
+}
+#name:focus {
+    outline: none;
+}
+
+#email {
+    margin-right: 20px;
+    width: 200px;
+    border: 1px solid brown;
+    border-radius: 3px;
+}
+#email:focus {
+    outline: none;
+}
+#submit {
+    height: 29px;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(160, 41, 41);
+    border-radius: 3px;
+    color: #fff;
+    box-shadow: 1px 1px 5px rgba(29, 25, 25, 0.815);
+    transition: box-shadow .2s linear;
+}
+#submit:hover {
+    box-shadow: 1px 1px 3px rgba(29, 25, 25, 0.4);
+    transition: box-shadow .2s linear;
+}
+.about__link-home {
+    margin-top: 500px;
+}
+
+/*Post Data*/
+
+.main__post {
+    margin-top: 100px;
+    text-align: center;
+}
+.main__post-data {
+    margin-bottom: 600px;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(9, 70, 67);
+    text-decoration: underline;
+}

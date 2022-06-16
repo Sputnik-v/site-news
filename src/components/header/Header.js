@@ -41,7 +41,7 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="header__block">
-                    <a href="https://www.indiatoday.in"><div className="header__logo">News Today <span className="header__logo-span">Go</span></div></a>
+                    <a href="/"><div className="header__logo">News Today <span className="header__logo-span">Go</span></div></a>
                     <nav className="header__nav">
                         <ul className="header__ul">
                             <a href="yandex.ru"><li className="header__li">World News</li></a>
