@@ -45,7 +45,13 @@ class ApiServer {
       }
       return await res.json();
     }
-
+    getNewsCountrys = async (countrys) => {
+      const res = await fetch(`https://newsapi.org/v2/top-headlines?country=${countrys}&apiKey=_APIKey`);
+      if (!res.ok) {
+        throw new Error(`Not Fetch - ${res.status}`);
+      }
+      return await res.json();
+    }
 
 
 }

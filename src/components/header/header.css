@@ -31,6 +31,7 @@
     align-items: center;
     color: #fff;
     font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .header__ul a {
     display: block;
@@ -44,12 +45,6 @@
     color: rgb(136, 44, 44);
     text-shadow: none;
     transition: all .2s linear;
-}
-.header__li-ukrain {
-    font-size: 27px;
-    background-image: linear-gradient(rgba(18, 18, 131, 0.7), rgba(190, 190, 30, 0.7));
-    padding: 0 10px;
-    border-radius: 7px;
 }
 .header__string {
     margin-top: 10px;

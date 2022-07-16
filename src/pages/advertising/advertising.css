@@ -1,6 +1,14 @@
-.advert .container {
-    margin-top: 30px;
+.advert__title {
+    margin-top: 50px;
+    color: rgb(148, 28, 28);
 }
 .about__link-home {
     margin-top: 400px;
 }
+.advert__description {
+    padding-left: 20px;
+}
+.advert__li {
+    padding-left: 40px;
+}
+

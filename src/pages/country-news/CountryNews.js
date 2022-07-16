@@ -1,23 +1,22 @@
-import React, { useState,useEffect } from "react";
-import ApiServer from "../../../api-server/Api-server";
-import './main-news.css';
+import React, {useState, useEffect} from "react";
+import ApiServer from "../../api-server/Api-server";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import './countryNews.css';
 
-const MainNews = () => {
-
+const CountryNews = (props) => {
+    
     const [news, setNews] = useState([]);
-    const [loadNews, setLoadNews] = useState(false);
 
     const appServer = new ApiServer();
 
     useEffect(() => {
-        appServer.getNewsPopularRequest('war')
+        console.log(props.string);
+        appServer.getNewsPopularRequest(props.string)
             .then(({articles}) => {
-                if (loadNews) {
-                    return
-                } else {
-                    setLoadNews(true);
+                
                     setNews(articles);
-                }
+                
             })
     },[])
 
@@ -41,18 +40,22 @@ const MainNews = () => {
    })
 
     return (
-        <div className="news">
-            <div className="news__container">
-                {content}
-                <a href="https://yandex.ru/news" className="news__link">
-                    <img src="more__fone.jpg" alt="fone" className="news__link-img" />
-                    <div className="news__cont news__cont-more">More News</div>
-                </a>
+        <>
+            <Header/>
+            <div className="news">
+                <div className="news__container">
+                    {content}
+                    <a href="https://yandex.ru/news" className="news__link">
+                        <img src="more__fone.jpg" alt="fone" className="news__link-img" />
+                        <div className="news__cont news__cont-more">More News</div>
+                    </a>
+                </div>
             </div>
-        </div>
-       
+            <Footer/>
+        </>
 
     )
+    
 }
 
-export default MainNews;
+export default CountryNews;

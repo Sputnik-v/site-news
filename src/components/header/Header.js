@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from "react";
 import ApiServer from "../../api-server/Api-server";
+import { Link } from "react-router-dom";
 import './header.css';
 
 const Header = () => {
 
     const [data, setData] = useState([]);
     const [load, setLoad] = useState(false);
+    const [id, setId] = useState('');
+    
 
     const ap = new ApiServer();
 
@@ -21,6 +24,8 @@ const Header = () => {
                 }
             });
     }, []);
+
+    
     
   
     const elem = data.map((item, i) => {
@@ -33,9 +38,7 @@ const Header = () => {
         )
     })
 
-    
 
-    
 
     return (
         <header className="header">
@@ -44,11 +47,12 @@ const Header = () => {
                     <a href="/"><div className="header__logo">News Today <span className="header__logo-span">Go</span></div></a>
                     <nav className="header__nav">
                         <ul className="header__ul">
-                            <a href="yandex.ru"><li className="header__li">World News</li></a>
-                            <a href="mail.ru"><li className="header__li">US News</li></a>
-                            <a href="google.com"><li className="header__li header__li-ukrain">Ukrain News</li></a>
-                            <a href="facebook.com"><li className="header__li">Europe News</li></a>
-                            <a href="indiatoday.in"><li className="header__li header__li-russian">Russian News</li></a>
+
+                            <Link to="/world"><li className="header__li">World News</li></Link>
+                            <Link to="/us_news"><li className="header__li">US News</li></Link>
+                            <Link to="/ukr_news"><li className="header__li header__li-ukrain">Ukrain News</li></Link>
+                            <Link to="/europe"><li className="header__li">Europe News</li></Link>
+                            <Link to="/russian"><li className="header__li header__li-russian">Russian News</li></Link>
                         </ul>
                     </nav>
                 </div>
